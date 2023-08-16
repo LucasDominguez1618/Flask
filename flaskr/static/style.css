@@ -1,32 +1,32 @@
 html {
     font-family: sans-serif;
-    background: #eee;
+    background: #000000;
     padding: 1rem;
   }
   
   body {
     max-width: 960px;
     margin: 0 auto;
-    background: white;
+    background: #000000;;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: serif;
-    color: #377ba8;
+    color: #c01fc0;
     margin: 1rem 0;
   }
   
   a {
-    color: #377ba8;
+    color: #c01fc0;
   }
   
   hr {
     border: none;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid rgb(255, 0, 0);;;
   }
   
   nav {
-    background: lightgray;
+    background: #000000;;
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
@@ -59,7 +59,7 @@ html {
   }
   
   .content > header {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid rgb(255, 0, 0);
     display: flex;
     align-items: flex-end;
   }
@@ -72,8 +72,8 @@ html {
   .flash {
     margin: 1em 0;
     padding: 1em;
-    background: #cae6f6;
-    border: 1px solid #377ba8;
+    background: #000000;
+    border: 1px solid #c01fc0;
   }
   
   .post > header {
@@ -92,15 +92,17 @@ html {
   }
   
   .post .about {
-    color: slategray;
+    color: #c01fc0;
     font-style: italic;
   }
   
   .post .body {
+    color: #c01fc0;
     white-space: pre-line;
   }
   
   .content:last-child {
+
     margin-bottom: 0;
   }
   
@@ -111,6 +113,7 @@ html {
   }
   
   .content label {
+    color: #c01fc0;
     font-weight: bold;
     margin-bottom: 0.5em;
   }
