@@ -14,6 +14,7 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        ConfirmPassword = request.form['ConfirmPassword']
         db = get_db()
         error = None
 
@@ -21,6 +22,10 @@ def register():
             error = 'Username is required.'
         elif not password:
             error = 'Password is required.'
+        
+        elif (not ConfirmPassword == password):
+            error = 'las contraseñas no coinciden'
+
 
         if error is None:
             try:
@@ -33,6 +38,7 @@ def register():
                 error = f"User {username} is already registered."
             else:
                 return redirect(url_for("auth.login"))
+            
 
         flash(error)
 
