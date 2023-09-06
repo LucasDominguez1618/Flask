@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block header %}
+<h1>{% block title %}Cuenta{% endblock %}</h1>
+{% endblock %} {% block content %}
+<form method="post">
+  <label for="mail">Editar Mail</label>
+  <input name="email" id="email" value="{{user['email']}}" required />
+  <input type="submit" value="Cambiar" />
+  <label for="deleteA">Borrar cuenta</label>
+  <input type="submit" value="Borrar cuenta" />
+</form>
+{% endblock %}
