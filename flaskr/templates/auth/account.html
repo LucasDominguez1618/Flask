@@ -5,7 +5,14 @@
   <label for="mail">Editar Mail</label>
   <input name="email" id="email" value="{{user['email']}}" required />
   <input type="submit" value="Cambiar" />
-  <label for="deleteA">Borrar cuenta</label>
-  <input type="submit" value="Borrar cuenta" />
 </form>
+<form action="{{ url_for('auth.delete_user') }}" method="post">
+  <input
+    class="danger"
+    type="submit"
+    value="Borrar"
+    onclick="return confirm('Estas seguro?');"
+  />
+</form>
+
 {% endblock %}

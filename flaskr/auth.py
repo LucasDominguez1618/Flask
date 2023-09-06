@@ -119,3 +119,14 @@ def account():
             return redirect(url_for('blog.index'))
 
     return render_template('auth/account.html', user=g.user)
+
+
+@bp.route('/delete', methods=('POST',))
+@login_required
+def delete_user():
+    db = get_db()
+    db.execute('DELETE FROM post WHERE author_id = ?', (g.user["id"],))
+    db.execute('DELETE FROM user WHERE id = ?',(g.user["id"],))
+    db.commit()
+    
+    return redirect(url_for('blog.index'))

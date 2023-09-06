@@ -95,12 +95,4 @@ def delete(id):
     db.commit()
     return redirect(url_for('blog.index'))
 
-@bp.route('/<int:id>/delete', methods=('POST',))
-@login_required
-def delete_user():
-    db = get_db()
-    db.execute('DELETE FROM user WHERE id = ?', (g.user['id']))
-    db.commit()
-    return redirect(url_for('register.index'))
-
 
